@@ -1,0 +1,114 @@
+.card {
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+.course-item {
+  display: flex;
+  padding: 2px;
+
+  flex-direction: row;
+
+  margin: 1rem 1rem;
+  background-color: #ffffff;
+}
+.course-item__description {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.checked{
+  background-color: #ee6c4d;
+}
+.course-item__image {
+  display: flex;
+  flex-direction: row;
+  width: 95px;
+  height: 80px;
+  border-radius: 4px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+.course-item__image img{
+  width: 100%;
+  height: 100%;
+}
+.course-item__title>p {
+
+  word-wrap: break-word;
+}
+.course-item__title {
+  margin-left: 10px;
+  margin-top: -17px;
+  width: 32%;
+  font-weight: bold;
+  font-size: 10px;
+}
+.course-item__reecommendation-list{
+  display: flex;
+  flex-direction: row;
+}
+.course-item__reecommendation {
+  display: flex;
+  flex-direction: row;
+}
+.course-item__reecommendation button {
+  margin: 2px 6px;
+  font-weight: 100;
+  color: #ffffff;
+  background-color: #ee6c4d;
+  border-radius: 5px;
+}
+.course-item__author  {
+  margin-top: 12px;
+  margin-left: -30px;
+  text-align: center;
+  width: 26%;
+}
+.course-item__price-strike{
+  font-size: 12px;
+  padding: 3px;
+  margin-top: 15px;
+}
+i{
+  font-size: 12px;
+}
+.course-item__price, p{
+  font-size: 12px;
+  padding: 3px;
+  margin-top: 15px;
+
+}
+.course-item__author h4 {
+  margin-left: 65px;
+  margin-top: 6px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+  width:auto;
+}
+.course-item__details {
+  float:right;
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-left: 30px;
+  width: 45%;
+}
+.course-item__details > div {
+  margin: 6px;
+  text-align: center;
+  align-items: flex-start;
+  font-size: 30px;
+}
+
+.course-item__cart-button > button {
+  background-color: #ee6c4d;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+  background: #ee6c4d;
+
+}

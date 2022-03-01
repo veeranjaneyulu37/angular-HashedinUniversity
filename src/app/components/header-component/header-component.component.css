@@ -1,0 +1,16 @@
+
+.hashedin-nav{
+    box-sizing: border-box;
+    border-bottom-width: 2em;
+    box-shadow: 5px 5px 15px -6px #000000;
+}
+.brand-logo{
+  margin-left: 50px;
+}
+.nav-link{
+  color: black;
+}
+.navbar-light{
+  box-shadow: 5px 5px 15px -6px #000000;
+  background-color: #F2F5EA;
+}

@@ -1,0 +1,30 @@
+
+{"courses": [ {
+    "id": "8",
+    "title": "The Complete React guide-2022",
+    "author": "Hashedin university",
+    "description": "Learn modern React by building 4 projects including a Firebase 9 app and a full stack MERN app",
+    "tags": ["Beginners ", "Advanced ", "Frontend"],
+    "actualPrice": 6000,
+    "discount": 15,
+    "isWishlisted": false,
+    "isRecommended": true,
+    "PriceOrder":0,
+    "img":"assets/React.jpg",
+    "video":"https://www.youtube.com/embed/Tn6-PIqc4UM"
+  },
+  {
+    "id": "9",
+    "title": "Salesforce Developer Training with real-time project",
+    "author": "Deepika Khanna",
+    "description": " Salesforce Development: Learn apex, Visualforce and REST Webservices with this real-time project",
+    "tags": ["Beginners ", "Advanced "],
+    "actualPrice": 1200,
+    "discount": 10,
+    "isWishlisted": false,
+    "isRecommended": false,
+    "PriceOrder":0,
+    "img":"assets/salesforce.jpg",
+    "video":"https://www.youtube.com/embed/A7AEc-B2PKQ"
+  }
+]}

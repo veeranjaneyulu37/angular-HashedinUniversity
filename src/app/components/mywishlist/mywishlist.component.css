@@ -1,0 +1,17 @@
+.courses{
+  width:65%;
+  height: auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.3rem;
+  margin: 57px;
+  margin-top: 63px;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+
+.wishlist-tag{
+  float: left;
+  margin-top: 15px;
+margin-left: 78px;
+  font-weight: bold;
+}

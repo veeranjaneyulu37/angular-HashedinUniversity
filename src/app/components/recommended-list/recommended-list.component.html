@@ -1,0 +1,41 @@
+<div >
+  <a *ngFor="let course of recommendedListArray| paginate: { itemsPerPage: 3, currentPage: p }  ">
+  <div class="card course-item" style="height: 20%;">
+    <div class="course-item__description">
+      <div class="course-item__image">
+        <img  src={{course.img}} alt="image" />
+      </div>
+    </div>
+    <div class="course-item__title">
+      <p>{{ course.title }}</p>
+      <div class="course-item__reecommendation-list"  >
+        <div class="course-item__reecommendation" *ngFor="let rec of course.tags">
+          <button class="btn"  style="height: 25px; width:auto; text-align: center; font-size: 12px;margin-bottom: 10px; padding: 2px;">{{ rec }}</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="course-item__author">
+      <h4>{{ course.author }}</h4>
+    </div>
+
+    <div class="course-item__details">
+
+      <div class="course-item__price"><p>Rs{{ course.actualPrice }}/-</p></div>
+      <div class="course-item__price-strike"><p><del>Rs.{{course.discount>0? course.actualPrice-(course.actualPrice *course.discount/100):'0' }}/-</del></p></div>
+      <div class="course-item__cart-button">
+        <button class="btn btn-lg" (click)="addCoursesToCart(course)">Add to cart</button>
+        <span style="margin-left: 6px"
+          ><i class="fa-thin fa-greater-than"></i
+        ></span>
+      </div>
+    </div>
+  </div>
+</a>
+<div  style="float: left; margin-top: 15px;">
+  <pagination-controls *ngIf="recommendedListArray.length>0" class="my-pagination" previousLabel="<"
+  nextLabel=">"(pageChange)="p = $event"></pagination-controls>
+  </div>
+
+</div>
+

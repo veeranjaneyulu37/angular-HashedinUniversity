@@ -1,0 +1,74 @@
+<app-banner-component></app-banner-component>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/courses">Courses</a></li>
+    <li class="breadcrumb-item" aria-current="page">{{ breadCrumTitle }}</li>
+  </ol>
+</nav>
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="box">
+      <div class="course-details__title">{{ course_list[0].title }}</div>
+      <div class="course-details__author">
+        {{ course_list[0].author }}
+      </div>
+      <div class="tag_wrapper" *ngFor="let tag of  course_list[0].tags">
+        <div class="course-details__tags" >
+         <p> {{tag}}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="box stack-top">
+      <iframe
+        width="420"
+        height="345"
+        src="https://www.youtube.com/embed/fq4N0hgOWzU"
+      >
+      </iframe>
+    </div>
+  </div>
+  <div class="course-detail__wrapper">
+    <div class="course-detail__description">
+      <div class="course-detail__description-title">
+        <h4>Course Details</h4>
+        <p>
+          {{ course_list[0].description }}
+        </p>
+      </div>
+    </div>
+    <div class="course-detail__price">
+      <h4>
+       Rs. {{
+          course_list[0].discount
+            ? course_list[0].actualPrice -
+              (course_list[0].actualPrice * course_list[0].discount) / 100
+            : course_list[0].actualPrice
+        }}/-
+      </h4>
+      <div>
+        <del><p>Rs.{{course_list[0].discount? course_list[0].actualPrice :"-"}}/-</p></del>
+      </div>
+      <div>
+        <span
+          ><p>
+            <i class="fa-solid fa-clock"></i>{{randomTime}} hours left for this price
+          </p></span
+        >
+      </div>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <div class="cart-add">
+          <button type="button" class="btn btn-outline-danger" (click)="addToCart(course_list[0])">
+            Add to Cart
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+        <div>
+          <button type="button" class="btn cart btn-outline-danger" (click)="addToWishList(course_list[0])">
+            Add to WishList
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div
+            class="form-check"
+            *ngFor="let data of getControls(); let i = index"
+            formArrayName="AreaInterested"
+          >
+            <div [formGroupName]="i">
+              <label>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="design{{ i }}"
+
+                  [value]="data.value.area"
+                  (change)="
+                    onCheckInterestArea(data.value.area, $event)
+                  "
+                  formControlName="isSelected"
+                />
+                {{ data.value.area }}
+              </label>
+            </div>
+          </div>

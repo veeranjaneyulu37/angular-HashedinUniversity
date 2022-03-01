@@ -1,0 +1,24 @@
+<app-banner-component [bannerName]="title"></app-banner-component>
+
+<div class="checkout-info">
+
+  <aside>
+    <div class="checkout-title">
+      <p>Your Total Cart Value</p>
+    </div>
+    <div class="total_price">
+     <p>Rs.{{totalCartValue}}/-</p>
+    </div>
+    <div class="checkout__btn">
+      <button class="btn" (click)="CheckoutCart()">checkout</button>
+    </div>
+  </aside>
+</div>
+<section class="courses">
+  <div style="text-align: justify;">{{CartList.length}} Courses in Cart </div>
+  <app-card-component [cartArray]="CartList" [UI]="ActivateUi"></app-card-component>
+</section>
+<section class="courses">
+  <div>Recommended Courses </div>
+  <app-recommended-list [recoList]="RecommendedCartList"></app-recommended-list>
+</section>

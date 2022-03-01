@@ -1,0 +1,90 @@
+.porfile-container {
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 70px;
+  height: 1000px;
+  display: flex;
+  margin-top: 30px;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+.profile-card__img img {
+  background-size: contain;
+  vertical-align:middle;
+  background-position: 10px 10px;
+  margin: -12px;
+  width: 180px;
+}
+
+.profile-card__img {
+  width: 191px;
+  border-radius: 5px;
+  height: 191px;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 5px 5px 15px -6px #000000;
+
+  flex-direction: row;
+
+}
+.profile-card__details {
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -6px #000000;
+  width: 85%;
+  height: 875px;
+  padding: 15px;
+  margin: 20px;
+
+  flex-direction: row;
+}
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.profile-form__about {
+  margin-top: 10px;
+  margin-left: 2rem;
+}
+.profile-form__about-input {
+  width: 50%;
+  height: 120px;
+}
+.profile-checkboxes,
+.profile-isStudent {
+  margin: 2rem;
+}
+.experience-wrapper {
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+.profile-experience__card {
+  margin: 2rem;
+  padding: 3px;
+}
+.options-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.Profile-save__button {
+
+  margin: 0.5rem;
+
+}
+.Profile-save__button button {
+
+  color: white;
+  width: 110px;
+  float: right;
+  padding: 2px;
+  height: 30px;
+  background-color: #ee6c4d;
+}
+/* .isProffesional,.experience{
+  background-color: #ee6c4d;
+} */
+.form-check-input:checked {
+  background-color: #ee6c4d;
+  border-color: #ee6c4d;
+}

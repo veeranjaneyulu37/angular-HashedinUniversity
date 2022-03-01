@@ -1,0 +1,143 @@
+<app-banner-component [bannerName]="'Profile'"></app-banner-component>
+
+<div class="porfile-container">
+  <div class="profile-card">
+    <div class="profile-card__img">
+      <img src="assets/veera_profile.jpg" />
+    </div>
+
+  </div>
+  <div class="profile-card__details">
+    <form
+      class="profile-form"
+      [formGroup]="userform"
+      (ngSubmit)="OnProfileSave()"
+    >
+      <div class="profile-form__namegroup form-row">
+        <div class="form-group">
+          <label for="displayName">Display Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="displayName"
+            placeholder="Display Name"
+            formControlName="DisplayName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            placeholder="First Name"
+            formControlName="FirstName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder="Last Name"
+            formControlName="LastName"
+          />
+        </div>
+      </div>
+      <div class="profile-form__about form-group">
+        <label for="about">About</label>
+        <input
+          id="about"
+          class="form-control profile-form__about-input"
+          type="text"
+          formControlName="About"
+          readonly
+        />
+      </div>
+      <div class="profile-form__interest form-group">
+        <div class="profile-checkboxes">
+          <P>your Area of interest</P>
+
+          <div
+            class="form-check"
+            *ngFor="let data of getControls(); let i = index"
+            formArrayName="AreaInterested"
+          >
+            <div [formGroupName]="i">
+              <label>
+                <input
+                  class="form-check-input experience"
+                  type="checkbox"
+                  id="design{{ i }}"
+
+                  [value]="data.value.area"
+                  (change)="
+                    onCheckInterestArea(data.value.area, $event)
+                  "
+                  formControlName="isSelected"
+                />
+                {{ data.value.area }}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-isStudent form-group">
+        <p>Are you a student or profeesional ?</p>
+        <div
+        class="form-check"
+        *ngFor="let data of dummy_profile[0].StudentList; let i = index ">
+        <div >
+          <label>
+            <input
+              class="form-check-input "
+              [ngClass]="{isProffesional:isShowExperience==true}"
+              type="radio"
+              id="student"
+
+              [value]="data.value"
+              (change)="
+              onCheckIsStudent(data.value, $event)
+              "
+              formControlName={{data.controlName}}
+            />
+            {{ data.title }}
+          </label>
+        </div>
+      </div>
+
+      </div>
+      <div class="experience-wrapper" *ngIf="isShowExperience">
+        <div class="profile-experience__card">
+          <div
+            class="exp-question__card"
+            *ngFor="let item of dummy_profile[0].Experience; let i = index"
+          >
+            <p>{{ item.question }}</p>
+            <div class="options-row">
+              <div
+                class="form-check"
+                *ngFor="let option of dummy_profile[0].Experience[i].options"
+              >
+                <input
+                  class="form-check-input experience"
+                  type="radio"
+                  id="student"
+                  formControlName={{item.controlName}}
+                  [value]="option.value"
+                />
+                <label class="form-check-label" for="student"
+                  >{{ option.name }}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Profile-save__button">
+        <button class="btn" type="submit"><p>Save</p></button>
+      </div>
+    </form>
+  </div>
+</div>

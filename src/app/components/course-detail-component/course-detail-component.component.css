@@ -1,0 +1,152 @@
+nav{
+  margin-left: 41px;
+    margin-top: 19px;
+}
+.courses {
+  width: 90%;
+  height: auto;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid goldenrod;
+  padding: 0.3rem;
+  margin: 57px;
+  margin-top: 16px;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+ol.breadcrumb li+li:before {
+  color: black;
+    content: ">\00a0";
+    font-size: 23px;
+    margin-top: -4px;
+}
+.breadcrumb{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #000000;
+
+}
+.container-fluid{
+  width: 100%;
+  height: 180px;
+  position: relative;
+  margin:0;
+  padding: 0;
+}
+.box{
+  width: 100%;
+  background-color: #000000;
+  height: 80%;
+  /* position: absolute; */
+  top: 0;
+
+
+}
+.stack-top{
+  /* background-color: #000000; */
+  width: 33%;
+    float: right;
+    margin-right: 135px;
+    margin-left: 9rem;
+    z-index: 9;
+    height: 100%;
+    margin-top: -7rem;
+
+}
+
+.stack-top video, iframe{
+
+  width: 100%;
+    height: 183px;
+}
+.course-detail__wrapper{
+  display: flex;
+  width: 100%;
+}
+ h4{
+  font-size: 14px;
+  font-weight: 800;
+  margin: 10px;
+}
+.course-details__author{
+  opacity: 0.5;
+  color: #ee6c4d;
+}
+.tag_wrapper{
+  display: inline-flex;
+  margin-top: -19px;
+}
+.course-details__tags{
+  margin: 0;
+}
+.course-details__tags p{
+  margin: 0;
+  position: relative;
+  background-color: white;
+    border-radius: 4px;
+    color: black;
+}
+
+p{
+  font-size: 14px;
+  word-break: break-all;
+  padding: 2px;
+  margin: 15px;
+  text-align: center;
+}
+span>p{
+  color: #ee6c4d;
+  margin-left: 2px;
+}
+.course-detail__description{
+  margin-top: -53px;
+    margin-left: 36px;
+    width: 52%;
+
+    height: 191px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px -6px #000000;
+
+}
+.course-detail__price{
+  margin-top: 19px;
+    margin-left: 18px;
+    width: 34%;
+    border-radius: 15px;
+    float: left;
+    height: 191px;
+    box-shadow: 5px 5px 15px -7px #000000;
+
+}
+.course-detail__price p{
+  text-align: left;
+}
+.course-details__title,
+.course-details__author,
+.course-details__tags
+{
+  padding: 0.25rem;
+  margin: 1rem;
+  color: white;
+}
+.cart-buttons button{
+  display: flex;
+
+}
+.btn-group{
+  margin-left: 40px;
+}
+.cart-add .btn{
+  padding: 0.25rem;
+  margin-right: 76px;
+  color: white;
+
+  background-color: #ee6c4d;
+}
+
+.btn-outline-danger:hover{
+  background-color: #ee6c4d;
+}

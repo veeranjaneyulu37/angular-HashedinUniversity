@@ -1,0 +1,24 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  height: 40%;
+  margin-top: 12px;
+  flex-direction: column;
+}
+.library-banner {
+  background-color: black;
+  width: 70%;
+  height: 60px;
+  border-radius: 10px;
+}
+.banner-name {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+p {
+  font: 1.2rem;
+  text-align: start;
+  color: white;
+}

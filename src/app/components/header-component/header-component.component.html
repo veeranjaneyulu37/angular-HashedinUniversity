@@ -1,0 +1,41 @@
+<div class="hashedin-nav">
+  <nav class="navbar fixed-top navbar-light">
+    <div class="container-fluid">
+      <div class="brand-logo">
+        <a class="navbar-brand" routerLink="">
+          <img
+            src="assets/hashedinlogo-modified.png"
+            alt=""
+            width="75"
+            height="55"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+      </div>
+      <div class="nav-items">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/wishlist'">my WishList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/cart'">
+              <img src="assets/cart-2-256.png" width="30" height="30" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/profile'" tabindex="-1">
+              <img
+                src="assets/administrator-2-256.png"
+                width="30"
+                height="30"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

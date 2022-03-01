@@ -1,0 +1,50 @@
+<div class="sidebar-info">
+  <aside>
+    <div class="sidebar-title">
+      <p>Your Cart Details</p>
+    </div>
+
+
+    <div class="display__items" *ngIf="cartArray.length==0; else elseblock">
+      <div class="side-info__items">
+
+        <div class="side-info__item" style="text-align: center;">
+          {{ "your cart is empty right now , please add courses from the list" }}
+        </div>
+        <div class="price_tag">
+          {{ "" }}
+        </div>
+      </div>
+    </div>
+    <ng-template  #elseblock>
+      <div class="display__items" *ngFor="let cart of cartArray">
+        <div class="side-info__items">
+          <div class="side-info__img">
+            <img src={{cart.img}} alt="image" />
+          </div>
+          <div class="side-info__item">
+            {{ cart.title }}
+          </div>
+          <div class="price_tag">
+          <p>Rs. {{
+              cart.discount
+                ? cart.actualPrice - (cart.actualPrice * cart.discount) / 100
+                : cart.actualPrice
+            }}/-
+          </p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <div class="price__info">
+      <div class="sidebar-price__total">
+        <div class="price__text">Total Cart Value</div>
+        <div class="cal_price" *ngIf="totalCartValue>0">
+          <p>Rs.{{ totalCartValue }}/-</p>
+          <a class="side-cart_btn" routerLink="/cart"><p>Go to checkout</p></a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
